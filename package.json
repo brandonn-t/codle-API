@@ -1,0 +1,23 @@
+{
+  "name": "codle-api",
+  "version": "1.0.0",
+  "description": "Restful API for my codle game.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonn-t/codle-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandonn-t/codle-API/issues"
+  },
+  "homepage": "https://github.com/brandonn-t/codle-API#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
