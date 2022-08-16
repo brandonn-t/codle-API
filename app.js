@@ -2,10 +2,12 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyparser = require('body-parser');
+const cors = require('cors');
 require('dotenv/config');
 
+//middleware
 app.use(bodyparser.json());
-
+app.use(cors());
 
 // Routes
 const postsRoute = require('./routes/posts');
