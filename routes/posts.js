@@ -16,9 +16,10 @@ router.get('/', async (req, res) => {
 //this submits a post
 router.post('/', async (req, res) => {
     const post = new Post({
-        title: req.body.title,
-        description: req.body.description
-
+        game: req.body.game,
+        letterCount: req.body.letterCount,
+        word: req.body.word,
+        category: req.body.category
     });
     try{
     const savedPost = await post.save()

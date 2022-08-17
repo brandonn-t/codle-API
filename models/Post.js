@@ -1,18 +1,22 @@
 const mongoose = require('mongoose');
 
 const PostSchema = mongoose.Schema({
-    title: {
+    game: {
         type: String,
         required: true
     },
-    description: {
+    letterCount: {
+        type: Number,
+        required: true
+    },
+    word: {
         type: String,
         required: true
     },
-    date: {
-        type: Date,
-        default: Date.now
-    },
+    category: {
+        type: String,
+        required: true
+    }
 
 });
 
