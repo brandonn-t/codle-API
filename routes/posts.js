@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const Post = require('../models/Post.js');
-
+/*
 // this gets back all posts
 router.get('/', async (req, res) => {
     try{
@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
         res.json({message: err})
     }
 });
+*/
 
 //this submits a post
 router.post('/', async (req, res) => {
@@ -62,6 +63,22 @@ router.patch('/:postId', async (req,res) => {
         res.json(update);
     }catch(err){
         res.json({message: err})
+    }
+});
+
+//get random
+router.get('/', async (req, res) => {
+    try {
+        const total = await Post.estimatedDocumentCount();
+        const randomNum =  Math.floor(Math.random() * total); 
+        Post.findOne()
+            .skip(randomNum)
+            .then((info) => {
+                return res.json({info: info});
+            });
+
+    } catch (error) {
+        res.json({message: error});
     }
 });
 
