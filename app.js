@@ -18,4 +18,4 @@ app.use('/posts', postsRoute);
 mongoose.connect(process.env.DB_CONNECTION,{useNewUrlParser: true} ,() => console.log("connected to DB!"));
 
 
-app.listen(3000);
+app.listen(8080);
