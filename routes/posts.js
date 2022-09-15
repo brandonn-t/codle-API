@@ -46,7 +46,7 @@ router.post('/', async (req, res) => {
 router.get('/:word', async (req, res) => {
 
     try{
-    const post = await Post.find(req.params.word);
+    const post = await Post.find({word: req.params.word});
     res.json(post);
 
     }catch(err){
