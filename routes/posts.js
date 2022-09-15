@@ -32,7 +32,7 @@ router.post('/', async (req, res) => {
 });
 
 //this gets back a specific post
-router.get('/:postId', async (req, res) => {
+/*router.get('/:postId', async (req, res) => {
 
     try{
     const post = await Post.findById(req.params.postId);
@@ -41,7 +41,7 @@ router.get('/:postId', async (req, res) => {
     }catch(err){
         res.json({message: err});
     }
-});
+});*/
 
 router.get('/:word', async (req, res) => {
 
