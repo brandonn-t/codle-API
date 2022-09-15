@@ -43,6 +43,17 @@ router.get('/:postId', async (req, res) => {
     }
 });
 
+router.get('/:word', async (req, res) => {
+
+    try{
+    const post = await Post.find(req.params.word);
+    res.json(post);
+
+    }catch(err){
+        res.json({message: err});
+    }
+});
+
 //delete a post
 router.delete('/:postId', async (req,res) => {
     try{
